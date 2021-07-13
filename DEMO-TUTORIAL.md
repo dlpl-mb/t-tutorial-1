@@ -1,22 +1,24 @@
 # Der lachende Smiley
 
 ## Information @unplugged 
-
-Der Smiley sollte froh oder traurig aussehen.
+**Erklärung**
+Der Smiley sollte froh UND/oder traurig aussehen.
 (Wie arbeiten die Button? [Schau dir das englische Video an.](https://youtu.be/t_Qujjd_38o)).
 
 ![Button A oder B drücken](/static/mb/projects/smiley-buttons/sim.gif)
 
-## Step 1 
+## Step 2 @fullscreen 
 
 Positioniere einen Block ``||input:Wenn Knopf A gedrück||`` und teste ihn druch Drücken des Button **A**.
 
 ```blocks
-input.onButtonPressed(Button.A, () => { 
-});
+input.onGesture(Gesture.Shake, function () {
+    basic.showNumber(randint(0, 10))
+})
+
 ```
 
-## Step 2 @fullscreen
+## Step 3 @unplugged
 (baa: @unplugged steht für Dialogfenster beim Tutorial, @fullscreen für offene Informationsfenster)
 Place a ``||basic:Zeige LEDs||`` innerhalb von ``||input:Wenn Knopf A gedrückt||`` to display a smiley on the screen. Press the **A** button in the simulator to see the smiley.
 
